@@ -1,0 +1,10 @@
+sudo su
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+python get-pip.py
+
+curl https://bootstrap.pypa.io/get-pip.py | sudo -H python3
+pip install python-openstackclient
+
+source the openstack-prep.sh file, passing in the vars. 

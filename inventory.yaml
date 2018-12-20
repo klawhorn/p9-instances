@@ -1,0 +1,8 @@
+nodes:
+  - name: platform9
+    config: 
+      transport: remote
+      remote:
+        project_name: "Katie Lawhorn"
+        user: "katie.lawhorn@puppet.com"
+        password: "iV6u8UEadA["

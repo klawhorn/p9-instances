@@ -1,0 +1,22 @@
+{
+  "files": ["ruby_task_helper/files/task_helper.rb"],
+  "input_method": "stdin",
+  "remote": true,
+  "parameters": {
+    "image": {
+      "description": "The image type to use for creating the instance",
+      "type": "String[1]",
+      "default": "centos_7_x86_64"
+    },
+    "flavor": {
+      "description": "The flavor of instance to create (ie small, med, etc)",
+      "type": "String[1]",
+      "default": "vol.medium"
+    },
+    "instance_name": {
+      "description": "The name of the resulting instance",
+      "type": "String[1]",
+      "default": "new instance"
+    }
+  }
+}
