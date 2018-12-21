@@ -4,5 +4,9 @@ nodes:
       transport: remote
       remote:
         project_name: "Katie Lawhorn"
-        user: "katie.lawhorn@puppet.com"
-        password: "iV6u8UEadA["
+        os_auth_url: "https://puppet.platform9.net/keystone/v3"
+        os_nova_url: "https://puppet.platform9.net/nova/v2.1"
+        os_identity_api: "3"
+        os_region_name: "Portland"
+        os_user_domain_id: "default"
+        os_project_domain_id: "default"

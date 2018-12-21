@@ -3,6 +3,11 @@
   "input_method": "stdin",
   "remote": true,
   "parameters": {
+    "user": {
+      "description": "The user with which to authenticate the platform9 request",
+      "type": "String[1]",
+      "default": "your_mom"
+    },
     "image": {
       "description": "The image type to use for creating the instance",
       "type": "String[1]",
