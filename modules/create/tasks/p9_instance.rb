@@ -3,7 +3,7 @@ require 'open3'
 require_relative "../../ruby_task_helper/files/task_helper.rb"
 
 class MyTask < TaskHelper 
-  def task(user: 'your_mom', instance_name: 'new instance', image: 'centos_7_x86_64', flavor: 'vol.medium', **kwargs)
+  def task(user: 'your_mom', instance_name: 'new instance', image: 'centos_7_x86_64', flavor: 'vol.medium', network: 'network1', **kwargs)
     
     # Set the environment variables that are needed for the openstack command
     ENV['OS_AUTH_URL']=kwargs[:'_target']['os_auth_url']
@@ -17,7 +17,7 @@ class MyTask < TaskHelper
     ENV['OS_PASSWORD']=kwargs[:'_target']['password']
     
     # Run the openstack command to make a new instance
-    stdout, sterr, status = Open3.capture3("openstack server create --image #{image} --flavor #{flavor} #{instance_name} -f json")
+    stdout, sterr, status = Open3.capture3("openstack server create --image #{image} --network #{network} --flavor #{flavor} #{instance_name} -f json")
     raise "Failed to provision #{sterr}" unless status.success?
     result = JSON.parse(stdout)
     

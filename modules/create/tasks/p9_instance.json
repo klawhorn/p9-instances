@@ -22,6 +22,11 @@
       "description": "The name of the resulting instance",
       "type": "String[1]",
       "default": "new instance"
+    },
+    "network": {
+      "description": "The network within with to assign the ip of the resulting instance",
+      "type": "String[1]",
+      "default": "network1"
     }
   }
 }
