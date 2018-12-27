@@ -23,8 +23,7 @@ class MyTask < TaskHelper
     
     # Print the instance id (next step is to get this into the next needed command)
     {'instance_name' => result['name'],
-     'instance_id'   => result['id'],
-     'instance_network' => result['network']}
+     'instance_id'   => result['id']}
   end
 end
 

@@ -17,6 +17,11 @@
       "description": "The network within to assign to the instance",
       "type": "String[1]",
       "default": "network1"
+    },
+    "ext_network": {
+      "description": "The external network to use for the floating ip address",
+      "type": "String[1]",
+      "default": "external"
     }
   }
 }
