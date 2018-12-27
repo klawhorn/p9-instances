@@ -1,6 +1,7 @@
 {
   "files": ["ruby_task_helper/files/task_helper.rb"],
   "input_method": "stdin",
+  "description": "Provision a new platform9 instance",
   "remote": true,
   "parameters": {
     "user": {
