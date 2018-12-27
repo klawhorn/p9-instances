@@ -8,3 +8,39 @@ curl https://bootstrap.pypa.io/get-pip.py | sudo -H python3
 pip install python-openstackclient
 
 source the openstack-prep.sh file, passing in the vars. 
+
+
+
+{
+    "result": {
+      "OS-DCF:diskConfig": "MANUAL",
+      "OS-EXT-AZ:availability_zone": "",
+      "OS-EXT-STS:fault": {
+      },
+      "OS-EXT-STS:power_state": "NOSTATE",
+      "OS-EXT-STS:task_state": "scheduling",
+      "OS-EXT-STS:vm_state": "building",
+      "OS-SRV-USG:launched_at": null,
+      "OS-SRV-USG:terminated_at": null,
+      "accessIPv4": "",
+      "accessIPv6": "",
+      "addresses": "",
+      "adminPass": "raBdymXd3gv6",
+      "config_drive": "",
+      "created": "2018-12-27T19:21:47Z",
+      "flavor": "vol.medium (30257337-98e9-46af-9246-a50b0aa8f41d)",
+      "hostId": "",
+      "id": "94902df7-6172-4786-8d07-b21055bc29c8",
+      "image": "centos_7_x86_64 (667d85ac-1d1e-a494-4017-437858a3da17)",
+      "key_name": "p9key",
+      "name": "testing1",
+      "progress": 0,
+      "project_id": "2183610169c14eee9ef633999d6a4ea8",
+      "properties": "",
+      "security_groups": "name='default'",
+      "status": "BUILD",
+      "updated": "2018-12-27T19:21:47Z",
+      "user_id": "f1c49852ff8b438fb288f324ca063523",
+      "volumes_attached": ""
+    }
+  }

@@ -1,0 +1,22 @@
+{
+  "files": ["ruby_task_helper/files/task_helper.rb"],
+  "input_method": "stdin",
+  "remote": true,
+  "parameters": {
+    "user": {
+      "description": "The user with which to authenticate the platform9 request",
+      "type": "String[1]",
+      "default": "your_mom"
+    },
+    "node": {
+      "description": "The platform9 instance to assign the network to",
+      "type": "String[1]",
+      "default": "testing1"
+    },
+    "network": {
+      "description": "The network within to assign to the instance",
+      "type": "String[1]",
+      "default": "network1"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-{
-  "puppet_task_version": 1,
-  "supports_noop": false,
-  "description": "Prep local machine with python requirements for openstack"
-}
