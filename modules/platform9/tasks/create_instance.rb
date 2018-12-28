@@ -17,7 +17,7 @@ class MyTask < TaskHelper
     ENV['OS_PASSWORD']=kwargs[:'_target']['password']
     
     # Run the openstack command to make a new instance
-    stdout, sterr, status = Open3.capture3("openstack server create --image #{image} --flavor #{flavor} --key-name p9key --network #{network} #{instance_name} -f json")
+    stdout, sterr, status = Open3.capture3("openstack server create --image #{image} --flavor #{flavor} --key-name #{key_name} --network #{network} #{instance_name} -f json")
     raise "Failed to provision #{sterr}" unless status.success?
     result = JSON.parse(stdout)
     

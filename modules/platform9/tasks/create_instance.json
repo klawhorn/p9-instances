@@ -28,6 +28,11 @@
       "description": "The network within with to assign the ip of the resulting instance",
       "type": "String[1]",
       "default": "network1"
+    },
+    "key_name": {
+      "description": "The name of the ssh key you have configured in platform9",
+      "type": "String[1]",
+      "default": "p9key"
     }
   }
 }
