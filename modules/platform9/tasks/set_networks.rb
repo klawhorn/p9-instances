@@ -16,9 +16,9 @@ class MyTask < TaskHelper
     ENV['OS_USERNAME']="#{user}"
     ENV['OS_PASSWORD']=kwargs[:'_target']['password']
     
-    # Run the openstack command to make a new instance
-    stdout, sterr, status = Open3.capture3("openstack server add network #{node} #{network}")
-    raise "Failed to provision #{sterr}" unless status.success?
+    # Run the openstack set the network for the node
+    #stdout, sterr, status = Open3.capture3("openstack server add network #{node} #{network}")
+    #raise "Failed to provision #{sterr}" unless status.success?
     
     # Creat a new floating ip
     stdout, sterr, status = Open3.capture3("openstack floating ip create #{ext_network} -f json")
