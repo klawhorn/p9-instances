@@ -16,11 +16,14 @@ class MyTask < TaskHelper
     ENV['OS_USERNAME']="#{user}"
     ENV['OS_PASSWORD']=kwargs[:'_target']['password']
     
+    ## TO-DO: Need conditional logic here for whether a network got set or not. 
+    # will probably need some kind of polling logic, because after creation the network is not ready right away. Time is spent "spawning"
+    
     # Run the openstack set the network for the node
     #stdout, sterr, status = Open3.capture3("openstack server add network #{node} #{network}")
     #raise "Failed to provision #{sterr}" unless status.success?
     
-    # Creat a new floating ip
+    # Create a new floating ip
     stdout, sterr, status = Open3.capture3("openstack floating ip create #{ext_network} -f json")
     raise "Failed to provision #{sterr}" unless status.success?
     floating_ip = JSON.parse(stdout)['name']
