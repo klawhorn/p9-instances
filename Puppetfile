@@ -1,0 +1,1 @@
+mod 'puppetlabs-bootstrap', '0.4.1'
