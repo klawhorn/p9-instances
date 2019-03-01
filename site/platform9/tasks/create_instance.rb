@@ -14,10 +14,13 @@ class MyTask < TaskHelper
     ENV['OS_PROJECT_DOMAIN_ID']=kwargs[:'_target']['os_project_domain_id']
     ENV['OS_PROJECT_NAME']=kwargs[:'_target']['project_name']
     ENV['OS_USERNAME']="#{user}"
-    ENV['OS_PASSWORD']=kwargs[:'_target']['password']
+    # use this var when you are using the password flag at the end of the task invocation
+    # ENV['OS_PASSWORD']=kwargs[:'_target']['password']
+    # use this var when you are putting the password into the inventory.yaml file
+    ENV['OS_PASSWORD']=kwargs[:'_target']['os_password']
     
     # Run the openstack command to make a new instance
-    stdout, sterr, status = Open3.capture3("openstack server create --image #{image} --flavor #{flavor} --key-name #{key_name} --network #{network} #{instance_name} -f json")
+    stdout, sterr, status = Open3.capture3("openstack server create --image #{image} --flavor #{flavor} --key-name #{key_name} --network #{network} #{instance_name} -f json --wait")
     raise "Failed to provision #{sterr}" unless status.success?
     result = JSON.parse(stdout)
     

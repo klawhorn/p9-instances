@@ -9,7 +9,7 @@
       "type": "String[1]",
       "default": "your_mom"
     },
-    "node": {
+    "instance_name": {
       "description": "The platform9 instance to assign the network to",
       "type": "String[1]",
       "default": "testing1"

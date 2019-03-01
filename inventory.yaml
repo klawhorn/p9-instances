@@ -10,3 +10,4 @@ nodes:
         os_region_name: "Portland"
         os_user_domain_id: "default"
         os_project_domain_id: "default"
+        #os_password: 
